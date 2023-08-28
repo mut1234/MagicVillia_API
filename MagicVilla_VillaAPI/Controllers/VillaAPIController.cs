@@ -95,8 +95,8 @@ namespace MagicVilla_VilliAPI.Controllers
 				return BadRequest();
 			}
 			var result = VillaStore.villaList.FirstOrDefault(u => u.Id == id);
-			villaDTO.Name = villaDTO.Name;
-			villaDTO.Sqft = villaDTO.Sqft;
+			result.Name = villaDTO.Name;
+			result.Sqft = villaDTO.Sqft;
 			villaDTO.Occupancy = villaDTO.Occupancy;
 			return NoContent();
 		}
