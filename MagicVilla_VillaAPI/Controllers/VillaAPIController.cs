@@ -100,7 +100,7 @@ namespace MagicVilla_VilliAPI.Controllers
 			villaDTO.Occupancy = villaDTO.Occupancy;
 			return NoContent();
 		}
-		[HttpPut("{id:int}", Name = "UpdatePartialVilla")]
+		[HttpPatch("{id:int}", Name = "UpdatePartialVilla")]
 		[ProducesResponseType(StatusCodes.Status204NoContent)]
 		[ProducesResponseType(StatusCodes.Status400BadRequest)]
 		public IActionResult UpdatePartialVilla(int id, JsonPatchDocument<VillaDTO> patchDTO)
