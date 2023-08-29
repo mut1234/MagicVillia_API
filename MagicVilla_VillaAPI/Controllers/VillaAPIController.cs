@@ -40,6 +40,7 @@ namespace MagicVilla_VilliAPI.Controllers
 		{
 			if (id == 0)
 			{
+				_logger.LogError("Get villa error with id " + id);
 				return BadRequest();
 			}
 			var villa = VillaStore.villaList.FirstOrDefault(u => u.Id == id);
@@ -87,7 +88,7 @@ namespace MagicVilla_VilliAPI.Controllers
 		{
 			if (id == 0)
 			{
-				_logger.LogError("Get villa error with id " + id);
+			
 				return BadRequest();
 			}
 			var result = VillaStore.villaList.FirstOrDefault(u => u.Id == id);
